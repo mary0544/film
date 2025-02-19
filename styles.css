@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('img/background.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Изображение будет покрывать весь фон */
+    background-position: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#movieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(25% - 20px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#pagination {
+    margin-top: 20px;
+}

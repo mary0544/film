@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильм</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="filmDetails"></div> <!-- Здесь будет отображаться информация о фильме -->
+    <a href="index.html">Назад к списку фильмов</a>
+    <script src="script.js"></script>
+    <script>
+        const movieId = new URLSearchParams(window.location.search).get('id'); // Получение ID фильма из URL
+        const movie = movies.find(m => m.id == movieId); // Поиск фильма по ID
+        document.getElementById('filmDetails').innerHTML = `
+            <h1>${movie.title}</h1>
+            <img src="${movie.image}" alt="${movie.title}" />
+            <p>Год выпуска: ${movie.year}</p>
+            <p>Описание: ${movie.description}</p>
+            <p>Рейтинг: ${movie.rating}</p>
+            <p>Режиссер: ${movie.director}</p>
+            <p>Актерский состав: ${movie.actors.join(', ')}</p>
+            <p><a href="${movie.link}" target="_blank">Смотреть фильм</a></p>
+        `;
+    </script>
+</body>
+</html>
